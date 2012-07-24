@@ -61,7 +61,7 @@ d3.json("temp.json", function(json) {
 	  
 	  
 	  .append("xhtml:body")
-	    .style("font", "12px 'Helvetica Neue'")
+	    .style("font", "12px 'Helvetica'")
 		.style("background-color","transparent")
 		.style("margin-left", "20px")
 		
