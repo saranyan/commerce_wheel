@@ -13,11 +13,15 @@ var tree = d3.layout.tree()
 var diagonal = d3.svg.diagonal.radial()
     .projection(function(d) { return [d.y, d.x/ 180 * Math.PI]; });
 
+	
 var vis = d3.select("#chart").append("svg")
     .attr("width", radius * 2)
     .attr("height", radius * 2)
   .append("g")
     .attr("transform", "translate(" + radius + "," + radius + ")");
+vis.append("circle")
+		.attr("r", 300)
+		.style("fill", "#cde7f6");
 
 d3.json("temp.json", function(json) {
   var nodes = tree.nodes(json);
@@ -32,34 +36,43 @@ d3.json("temp.json", function(json) {
       .data(nodes)
     .enter().append("g")
       .attr("class", "node")
-      .attr("transform", function(d) { if(d.name == "X.commerce") {
-		  return "rotate(0)"
-		} 
-		else {
-			return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")"; 
-		}})
+      .attr("transform", function(d) { 
+		//return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")";
+		 	if(d.name == "X.commerce") {
+		  		return "rotate(0)translate(0,20)"
+					} 
+	  		else {
+	  			return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")"; 
+	  		}
+		})
  
-	console.log("node")
-	console.log(node)
   node.append("circle")
       .attr("r", function(d){ return d.name ? size(d.name) : 10})
 	  .style("fill", function(d){ return d.name ? color(d.name) : "#fff"})
 	  .on("click", click);
   
   node.append("svg").append("foreignObject")
-	  .attr("width", 150)
-	  .attr("height", 100)
+	  .attr("width", 350)
+	  .attr("height", 150)
 	  .attr("x", function(d) { 
 		if(d.name == "X.commerce"){
-			return 0 ;
+			//return -50 ;
+			
 		}
 		else 
 		{
-		   return d.x < 180 ? spacing(d.name) : -1*spacing(d.name); 
+		   //return d.x < 180 ? spacing(d.name) : -1*spacing(d.name); 
 		}
 	   })
-	  
-	  
+	  .attr("transform", function(d){
+		if(d.name == "X.commerce"){
+			return "translate(0,10)"
+		}
+		else 
+		{
+		   //return d.x < 180 ? spacing(d.name) : -1*spacing(d.name); 
+		}	
+		})
 	  .append("xhtml:body")
 	    .style("font", "12px 'Helvetica'")
 		.style("background-color","transparent")
@@ -77,8 +90,8 @@ d3.json("temp.json", function(json) {
 	  .style("font-size", function(d){ return d.name ? font(d.name) : "11px"})
 	.append("svg").append('foreignObject').append('xhtml:body')
       	.html(function(d) { return d.name.split(' ').join('<br/>'); })
-*/
-   	
+*/   
+
 });
 
 function update(source) {
@@ -93,7 +106,7 @@ function color(name){
 }
 
 function size(name){
-	var stage1 = 60;
+	var stage1 = 15;
 	var stage2 = 30;
 	
 	var obj1 = {"X.commerce" : stage1,"Store":stage2,"Predictions":stage2,"Discovery":stage2,"Location":stage2, "GeoFencing" : stage2, "Payment":stage2};

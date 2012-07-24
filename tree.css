@@ -15,3 +15,11 @@
   stroke: #ccc;
   stroke-width: 1.5px;
 }
+
+path.link{
+	z-index: 1;
+}
+
+svg foreignObject {
+	z-index: 1000;
+}
