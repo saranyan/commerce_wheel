@@ -1,7 +1,7 @@
 .node circle {
   fill: #fff;
   /*stroke: steelblue;*/
-  stroke: #fff;
+  stroke: transparent;
   stroke-width: 1.5px;
 
 }
@@ -28,3 +28,18 @@ dice {
 	background: #fff;
 }
 
+#btn1 {
+	height: 300px;
+}
+
+#btn2 {
+	height: 300px;
+}
+
+#btn3 {
+	height: 300px;
+}
+
+button.btn.btn-large.btn-default {
+	height: 300px;
+}

@@ -19,13 +19,35 @@ var vis = d3.select("#chart").append("svg")
     .attr("height", radius * 2)
   .append("g")
     .attr("transform", "translate(" + radius + "," + radius + ")");
-vis.append("circle")
+var circle = vis.append("circle")
 		.attr("r", 300)
 		.attr("id", "maincircle")
-		 .style("-webkit-border-radius", "50px")
-		 .style("-moz-border-radius", "50px")
-		 .style("border-radius", "50px")
-		.style("fill", "#cde7f6");
+		 // .style("-webkit-border-radius", "50px")
+		 // 		 .style("-moz-border-radius", "50px")
+		 // 		 .style("border-radius", "50px")
+		//.style("fill", "#cde7f6");
+		.style("fill", "#718e3a");
+
+// var gradient = vis.append("svg:defs")
+//   .append("svg:linearGradient")
+//     .attr("id", "gradient")
+//     .attr("x1", "0%")
+//     .attr("y1", "0%")
+//     .attr("x2", "100%")
+//     .attr("y2", "100%")
+//     .attr("spreadMethod", "pad");
+// 
+// gradient.append("svg:stop")
+//     .attr("offset", "0%")
+//     .attr("stop-color", "#0c0")
+//     .attr("stop-opacity", 1);
+// 
+// gradient.append("svg:stop")
+//     .attr("offset", "100%")
+//     .attr("stop-color", "#c00")
+//     .attr("stop-opacity", 1);
+// 
+// circle.style("fill", "url(#gradient)");
 
 d3.json("temp.json", function(json) {
   var nodes = tree.nodes(json);
@@ -115,12 +137,12 @@ function links(name){
 }
 
 function color(name){
-	var obj1 = {"X.commerce" : "#ff6700","Store":"#4671d5","Predictions":"#6b8fd4","Discovery":"#36bbc3","Location":"#1f6b75", "GeoFencing" : "#00a480", "Payment":"#1f7b67"};
+	var obj1 = {"X.commerce" : "transparent","Store":"#e6ebea","Predictions":"#e6ebea","Discovery":"#e6ebea","Location":"#e6ebea", "GeoFencing" : "#e6ebea", "Payment":"#e6ebea"};
    return obj1[name];
 }
 
 function size(name){
-	var stage1 = 15;
+	var stage1 = 10;
 	var stage2 = 30;
 	
 	var obj1 = {"X.commerce" : stage1,"Store":stage2,"Predictions":stage2,"Discovery":stage2,"Location":stage2, "GeoFencing" : stage2, "Payment":stage2};
