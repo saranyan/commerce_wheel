@@ -21,6 +21,10 @@ var vis = d3.select("#chart").append("svg")
     .attr("transform", "translate(" + radius + "," + radius + ")");
 vis.append("circle")
 		.attr("r", 300)
+		.attr("id", "maincircle")
+		 .style("-webkit-border-radius", "50px")
+		 .style("-moz-border-radius", "50px")
+		 .style("border-radius", "50px")
 		.style("fill", "#cde7f6");
 
 d3.json("temp.json", function(json) {
@@ -78,7 +82,12 @@ d3.json("temp.json", function(json) {
 		.style("background-color","transparent")
 		.style("margin-left", "20px")
 		
-	    .html(function(d) { return d.name.split(' ').join('<br/>'); });
+	    .html(function(d) { 
+		
+		  return (typeof links(d.name)) !== "undefined" ? '<a href="'+ links(d.name)+'" target=_blank>'+d.name+'</a>': d.name.split(' ').join('<br/>'); 
+		
+		
+		});
 	
 
 /*
@@ -98,6 +107,11 @@ function update(source) {
   	console.log('now update it')
 	console.log(source.name);
 	
+}
+
+function links(name){
+	var obj1 = {"X.commerce" : "http://x.com","Magento":"http://www.magentocommerce.com/api/rest/introduction.html","Hunch":"http://hunch.com/developers/v1/","Redlaser":"http://redlaser.com","Milo":"http://milo.com/api-docs/", "eBay" : "https://www.x.com/developers/ebay", "PayPal":"https://www.x.com/developers/paypal", "card.io":"https://www.card.io/integrate/"};
+   return obj1[name];
 }
 
 function color(name){
