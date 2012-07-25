@@ -1,0 +1,85 @@
+{
+	"1":[
+		"Enable your favorite local store to scan any product using Redlaser and match the best price that you find online.",
+		"Scan a product using Redlaser and find out all the neighboring stores that carry the product and their prices. Sweet!",
+		"Are you at a bookstore? And you don't want to pay the full price on a book? Scan the ISBN now using RedLaser and use eBay's finding API to find an used book.",
+		"You can discover if your friend might be interested in a gift you find at Fry's. RedLaser can be used to scan items and get metadata about it, and use Hunch to get a recommendation score for that type of product.",
+		"Can you use card.io's scanning API to validate a person's PayPal account? or even better discover their account and charge them using PayPal? A long stretch...but you get the idea.",
+		"Use Milo's rest APIs to find realtime inventory status on the shelves. Maybe, when those fans line up for the next iPad, your app/service might help them to take the easy route to getting it.",
+		"Can you create something like Hipmunk for products? Airplanes become local merchants, prices become prices...you get the idea! Milo will give you the name of the local merchants and the product prices. Bring them on!",
+		"PayPal transaction search APIs give you information about all the transactions a PayPal account conducts. Can you spot trends, recurring payments, etc that gives user better control of their spending trends? Even better, can you provide an amazing experience?",
+		"If you have a magento store, you can use the REST apis to discover products. Combine it with Hunch, you can provide a customer with suggestions that they will like."
+	],
+	"2":[
+		"Create an easy workroll system to pay your employees and contractors using Mass Pay from PayPal.",
+		"Create a peer learning platform similar to SkillShare where teachers co-teach with others who share common interests. Using split payments, you can split money anyway you want.",
+		"Forget about needing extra devices, now take a photo of a credit card using card.io and make a charge. A sexy garage sale platform, anyone? Think about card.io.",
+		"Create a micropayments site using PayPal that rounds off few pennies from a grocery bill and donate to a charity of your liking.",
+		"I am ready to pay for a clean reading experience and no ads. Can you create a cleaner version of techcrunch or gizmodo or something and take payments through PayPal?",
+		"Oh, I am watching Big Bang Theory and I want to buy that T-shirt Sheldon is wearing. Can I get an app, please? You can use PayPal and eBay APIs.",
+		"PayPal transaction search APIs give you information about all the transactions a PayPal account conducts. Can you spot trends, recurring payments, etc that gives user better control of their spending trends? Even better, can you provide an amazing experience?"
+	],
+	"3":[
+		"When I walk into a store, can you tell me the products that would be interesting using my social data? Hunch's tastegraph API gives great product recommendations. Your challenge, tie that in with store inventory.",
+		"During shopping, I see a great product. I am not interested in it. But, a notification pops up saying that my friend John might like it. If he does buy the product, who knows, I might get an in-store coupon for my next visit. Use Hunch API.",
+		"eBay has a lot of products. What if we see a tab that says products you and your facebook friend's will like? I don't know about you, but I might just bookmark that page and keep coming back. Use Hunch and eBay APIs.",
+		"Where is that antique piece of jewellery? Where is that 1st edition of How to kill a Mockingbird? Milo APIs tell me which local stores carry these products.",
+		"You can discover if your friend might be interested in a gift you find at Fry's. RedLaser can be used to scan items and get metadata about it, and use Hunch to get a recommendation score for that type of product.",
+		"Create a content site that dynamically delivers personalized recommendations. Build the next FlipBoard or Zite. Hunch will get you started.",
+		"Let us create a user's search engine! What? Hunch lets you personalize search queries. Now can we use that information to create a search engine that speaks to an user's tastes?",
+		"Provide personalized recommendations on who to follow on twitter, who have same shopping patterns as you.",
+		"Identify people to follow based on taste graph. Create opportunities for shopping together and leverage coupons and deals. You can use hunch API and other marketplace APIs to realize this.",
+		"Reorganize the store inventories and present them dynamically based on what the user might like."
+	],
+	
+	"12":[
+		"Enable your favorite local store to scan any product using Redlaser and buy the one with the cheapest price.",
+		"Scan a product using Redlaser and find all the neighboring stores that carry it. You can thrown in PayPal in the mix by finding stores that accept PayPal/PayPal here",
+		"Buy a gift for your friend by discovering a product during your in-store visit. Using your social graph, you can get the product recommendations for you and your friends. Combine inventory/catalog APIs from eBay or Milo and pay using PayPal.",
+		"PayPal transaction search APIs give you information about all the transactions a PayPal account conducts. Can you spot trends, recurring payments, etc that gives user better control of their spending trends? Even better, can you provide an amazing experience?",
+		"You can discover if your friend might be interested in a gift you find at Fry's. RedLaser can be used to scan items and get metadata about it, and use Hunch to get a recommendation score for that type of product.",
+		"Create a peer learning platform similar to SkillShare where where you can co-teach with people sharing your interests. Using split payments, you can split money anyway you want."
+	],
+	
+	"13":[
+		"eBay has a lot of products. What if we see a tab that says products you and your facebook friend's will like? I don't know about you, but I might just bookmark that page and keep coming back. Use Hunch and eBay APIs.",
+		"When I walk into a store, can you tell me the products that would be interesting using my social data? Hunch's tastegraph API gives great product recommendations. Your challenge, tie that in with store inventory.",
+		"Create a shopping site that dynamically delivers personalized recommendations. Build the next FlipBoard or Zite. Hunch will get you started.",
+		"Reorganize the store inventories and present them dynamically based on what the user might like.",
+			"You can discover if your friend might be interested in a gift you find at Fry's. RedLaser can be used to scan items and get metadata about it, and use Hunch to get a recommendation score for that type of product.",
+		"Can you create something like Hipmunk for products? Airplanes become local merchants, prices become prices...you get the idea! Milo will give you the name of the local merchants and the product prices. Spice it up by only showing products that interest the consumer. Hunch will come to your rescue.",
+		"Are you at a bookstore? How about checking to see what people similar to you think about the book you are planning to buy?"
+		
+	],
+	
+	"23":[
+		"Create an easy workroll system to pay your employees and contractors using Mass Pay from PayPal.",
+		"Forget about needing extra devices, now take a photo of a credit card using card.io and make a charge. A sexy garage sale platform, anyone? Think about card.io.",
+		"Create a micropayments site using PayPal that rounds off few pennies from a grocery bill and donate to a charity of your liking.",
+		"I am ready to pay for a clean reading experience and no ads. Can you create a cleaner version of techcrunch or gizmodo or something and take payments through PayPal?",
+		"Oh, I am watching Big Bang Theory and I want to buy that T-shirt Sheldon is wearing. Can I get an app, please? You can use PayPal and eBay APIs.",
+		"PayPal transaction search APIs give you information about all the transactions a PayPal account conducts. Can you spot trends, recurring payments, etc that gives user better control of their spending trends? Even better, can you provide an amazing experience?",
+		"Enable your favorite local store to scan any product using Redlaser and buy the one with the cheapest price.",
+		"Scan a product using Redlaser and find all the neighboring stores that carry it. You can thrown in PayPal in the mix by finding stores that accept PayPal/PayPal here",
+		"Buy a gift for your friend by discovering a product during your in-store visit. Using your social graph, you can get the product recommendations for you and your friends. Combine inventory/catalog APIs from eBay or Milo and pay using PayPal.",
+		"PayPal transaction search APIs give you information about all the transactions a PayPal account conducts. Can you spot trends, recurring payments, etc that gives user better control of their spending trends? Even better, can you provide an amazing experience?",
+		"You can discover if your friend might be interested in a gift you find at Fry's. RedLaser can be used to scan items and get metadata about it, and use Hunch to get a recommendation score for that type of product.",
+		"Create a peer learning platform similar to SkillShare where where you can co-teach with people sharing your interests. Using split payments, you can split money anyway you want."
+	],
+	
+	"123":[
+		
+		"I am ready to pay for a clean reading experience and no ads. Can you create a cleaner version of techcrunch or gizmodo or something and take payments through PayPal?",
+		"Oh, I am watching Big Bang Theory and I want to buy that T-shirt Sheldon is wearing. Can I get an app, please? You can use PayPal and eBay APIs.",
+		"Enable your favorite local store to scan any product using Redlaser and buy the one with the cheapest price.",
+		"Scan a product using Redlaser and find all the neighboring stores that carry it. You can thrown in PayPal in the mix by finding stores that accept PayPal/PayPal here",
+		"Buy a gift for your friend by discovering a product during your in-store visit. Using your social graph, you can get the product recommendations for you and your friends. Combine inventory/catalog APIs from eBay or Milo and pay using PayPal.",
+		"PayPal transaction search APIs give you information about all the transactions a PayPal account conducts. Can you spot trends, recurring payments, etc that gives user better control of their spending trends? Even better, can you provide an amazing experience?",
+		"You can discover if your friend might be interested in a gift you find at Fry's. RedLaser can be used to scan items and get metadata about it, and use Hunch to get a recommendation score for that type of product.",
+		"Create a peer learning platform similar to SkillShare where where you can co-teach with people sharing your interests. Using split payments, you can split money anyway you want.",
+		"Create a shopping site that dynamically delivers personalized recommendations. Build the next FlipBoard or Zite. Hunch will get you started.",
+		"Reorganize the store inventories and present them dynamically based on what the user might like."
+	]
+	
+	
+}

@@ -7,7 +7,7 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
    	<script src="bootstrap/js/bootstrap.min.js"></script>
-		<script src="https://raw.github.com/paperjs/paper.js/master/dist/paper.js"></script>
+		
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     	<script type="text/paperscript" canvas="myCanvas">
 			
@@ -19,18 +19,107 @@
 			<div class="hero-unit" style="background:#fff;">
 			        <h1>(x)Commerce Wheel</h1>
 							<br/>
-			        <p>So, you want to learn about product discovery? </p>
+			        <p>So, do you believe in dreams? What a strange question to ask! In any case, check out these use cases on what you can accomplish with our APIs.</p>
 			
-							<p><div id="backlink" ><a class="btn btn-primary btn-large" href="/">Go back</a></div></p>
-							
+							<p><div id="backlink" ><a class="" href="/">Go back</a></div></p>
+					
+					<p class="lead"> Select the areas of your interest to generate random ideas for hacks </p>		
 			  </div>
-			<canvas id="myCanvas" resize></canvas>
 			
-					<!-- <div class="carousel-caption offset3" style="width:50%;margin-bottom:-450px;">
-										                  <h4>Radial Wheel</h4>
-										                  <p>This visualization is intended to provide an overview of all the products with an ability to drill down by clicking on a parent.</p>
-										                </div> -->
+			<div class="span14 row offset1" style="font-size:24px; margin-top: -50px;">
+				<div class="span3 dice">
+					 <button class="btn btn-large btn-default" data-toggle="button" id="btn1">Product Discovery</button>
+					
+					</div>
+					
+				<div class="span3 dice">
+					 <button class="btn btn-large btn-default" data-toggle="button" id="btn2">Payments and Analytics</button>
+					</div>
+				
+				<div class="span3 dice">
+						<button class="btn btn-large btn-default" data-toggle="button" id="btn3">Predictions and Experience</button>
+					</div>
+			
+					<!-- <div class="span2 dice">
+											<button class="btn btn-large btn-default" data-toggle="button" id="btn4">Experience</button>
+										</div> -->
+					
+					
+				</div>
+				
+					<div class="carousel-caption offset3" style="width:60%;margin-bottom:150px; display:none; height: 100px;" id="carousel">
+						<h4 style="display:inline" >Random Hack Idea</h4>
+						<a href="#" id="refresh" style="font-size:12px; color:orange;display:inline" class="pull-right">refresh</a>
+						<br/>
+						<p id="idea">This visualization is intended to provide an overview of all the products with an ability to drill down by clicking on a parent.</p>
+						</div>
 
     
   </body>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+	var ids;
+	var ideas;
+		$.getJSON('ideas.json', function(data){
+			ids = data;
+		});
+		
+	$('#btn1').click(function(){
+		$('#btn1').toggleClass('btn-success');
+		changeContent(getClassCode());
+	});
+	
+	$('#btn2').click(function(){
+		$('#btn2').toggleClass('btn-success');
+		changeContent(getClassCode());
+		
+	});
+	
+	$('#btn3').click(function(){
+		$('#btn3').toggleClass('btn-success');
+		changeContent(getClassCode());
+		
+	});
+	
+	$('a#refresh').click(function(){
+		classcode = getClassCode();
+		changeContent(classcode);
+		 ideas = ids[classcode];
+		 randomNum = Math.ceil(Math.random()*ideas.length);
+		$('p#idea').html(ideas[randomNum]);
+	});
+	
+	function changeContent(classcode) {
+		console.log(classcode)
+		if (classcode == ""){
+			$('#carousel').hide();
+		}
+		else {
+			$('#carousel').show();
+		   ideas = ids[classcode];
+			 randomNum = Math.ceil(Math.random()*ideas.length);
+			$('p#idea').html(ideas[randomNum]);
+		}
+		
+	}
+	
+	function getClassCode(){
+		str = '';
+		if($('#btn1').hasClass('btn-success')){
+			str = str+'1';
+		}
+		if($('#btn2').hasClass('btn-success')){
+				str = str+'2';
+			}
+		if($('#btn3').hasClass('btn-success')){
+				str = str+'3';
+			}
+		return str;
+	}
+});
+
+
+</script>
 </html>
