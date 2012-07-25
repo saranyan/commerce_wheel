@@ -21,9 +21,9 @@
 							<p><div id="backlink" style="display:none;"><a class="btn btn-primary btn-large" href="/radial">Go back</a></div></p>
 							<a href="https://twitter.com/share" class="twitter-share-button" data-text="commerce wheel for developers" data-via="saranyan" data-size="large" data-related="X_commerce" data-hashtags="datavizAPI">Tweet</a>
 							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>	
-							<div class="pull-right">
-								<a href="https://github.com/you"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub"></a>
-								</div>	
+							
+								<a href="https://github.com/saranyan/commerce_wheel"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+									
 			  </div>
 				
 					<!-- <div class="carousel-caption offset3" style="width:50%;margin-bottom:-450px;">
@@ -32,17 +32,17 @@
 										                </div> -->
 
     <div id="chart" style="margin-top:-10px;"></div>
-    <div id="temp" style="height:300px"></div>
+    <div id="temp" style="height:50px"></div>
 		</div>
     <script type="text/javascript" src="d3/tree-radial.js"></script>
 		<script type="text/javascript">
 			$(function() {
-			    var $elie = $("#chart"), degree = 0, timer;
+			    var $e = $("#chart"), degree = 0, timer;
 			    rotate();
 			    function rotate() {
 
-			        $elie.css({ WebkitTransform: 'rotate(' + degree + 'deg)'});  
-			        $elie.css({ '-moz-transform': 'rotate(' + degree + 'deg)'});                      
+			        $e.css({ WebkitTransform: 'rotate(' + degree + 'deg)'});  
+			        $e.css({ '-moz-transform': 'rotate(' + degree + 'deg)'});                      
 			        timer = setTimeout(function() {
 			            degree=degree+0.1; rotate();
 			        },10);
@@ -55,5 +55,13 @@
 			    });
 			});
 		</script>
+		<div class="container">
+		<footer class="footer">
+		        <p class="pull-right"><a href="#">Back to top</a></p>
+		        <p>Designed and built for <a href="http://twitter.com/x_commerce" target="_blank">@x_commerce</a> by <a href="http://twitter.com/saranyan" target="_blank">@saranyan</a>. </p>
+		        <p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+		        <p>Powered by D3, Bootstrap and Github! Thanks guys, for the awesome tools.</p>
+		      </footer>
+		</div>
   </body>
 </html>
