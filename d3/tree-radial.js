@@ -78,7 +78,7 @@ d3.json("temp.json", function(json) {
 	  .on("click", click);
   
   node.append("svg").append("foreignObject")
-	  .attr("width", 350)
+	  .attr("width", 100)
 	  .attr("height", 150)
 	  .attr("x", function(d) { 
 		if(d.name == "X.commerce"){

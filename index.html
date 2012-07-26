@@ -14,11 +14,19 @@
   <body>
 	 <div class="container">
 			<div class="" style="background:#fff;">
-			        <h1>(x)Commerce Wheel</h1>
+			        <h1>X.commerce APIs</h1> 
+							<!-- <img src="xcom.png" height="50px"></img> -->
 							<br/>
-			        <p class="lead">What does <span style="color:#f90000">e</span><span style="color:#1122cc">B</span><span style="color:#facb1a">a</span><span style="color:#95ce03">y</span> inc. offer to commerce developers? Tons of rich APIs and geekery. Click on the wheel to find links to developer documentation pages and use cases. Check out some <a href="discovery.html">hack ideas </a>here.</p>
-			
+			        <p class="">X.commerce is everything developer from <span style="color:#f90000">e</span><span style="color:#1122cc">B</span><span style="color:#facb1a">a</span><span style="color:#95ce03">y</span> inc. If you dare to dream of building a kick-ass commerce application, now is the time. Click on the wheel to find links to developer documentation pages. As you can see, there are APIs for almost every major commerce use case. Time to hack? </p>
+							
 							<p><div id="backlink" style="display:none;"><a class="btn btn-primary btn-large" href="/radial">Go back</a></div></p>
+							<p class="pull-right"> <img src="xcom.png"/>
+								<button class="btn btn-default" data-toggle="button" id="btn1">Discovery</button>
+								<button class="btn btn-default" data-toggle="button" id="btn2">Payments</button>
+								<button class="btn btn-default" data-toggle="button" id="btn3">Predict</button>
+								</p>
+								
+							<br/>
 							<a href="https://twitter.com/share" class="twitter-share-button" data-text="commerce wheel for developers" data-via="saranyan" data-size="large" data-related="X_commerce" data-hashtags="dataviz">Tweet</a>
 							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 							
@@ -30,10 +38,16 @@
 										                  <h4>Radial Wheel</h4>
 										                  <p>This visualization is intended to provide an overview of all the products with an ability to drill down by clicking on a parent.</p>
 										                </div> -->
-
+			<div class="navbar navbar-inner" style="display:none; height: 100px;" id="carousel">
+				<h4 style="display:inline; color:#fff" >Random Hack Idea</h4>
+				<a href="#" id="refresh" style="font-size:12px; color:orange;display:inline" class="pull-right">refresh</a>
+				<br/><br/>
+				<p id="idea">This visualization is intended to provide an overview of all the products with an ability to drill down by clicking on a parent.</p>
+        </div>
+															
     <div id="chart" style="margin-top:-75px;"></div>
-    <div id="temp" style="height:50px"></div>
-		</div>
+    
+	</div>
     <script type="text/javascript" src="d3/tree-radial.js"></script>
 		<script type="text/javascript">
 		var ang = 0.1;
@@ -64,6 +78,71 @@
 					ang = 0.1;
 				});
 			})
+		</script>
+		<script type="text/javascript">
+
+		$(document).ready(function(){
+			var ids;
+			var ideas;
+				$.getJSON('ideas.json', function(data){
+					ids = data;
+				});
+
+			$('#btn1').click(function(){
+				$('#btn1').toggleClass('btn-success');
+				changeContent(getClassCode());
+			});
+
+			$('#btn2').click(function(){
+				$('#btn2').toggleClass('btn-success');
+				changeContent(getClassCode());
+
+			});
+
+			$('#btn3').click(function(){
+				$('#btn3').toggleClass('btn-success');
+				changeContent(getClassCode());
+
+			});
+
+			$('a#refresh').click(function(){
+				classcode = getClassCode();
+				changeContent(classcode);
+				 ideas = ids[classcode];
+				 randomNum = Math.ceil(Math.random()*ideas.length);
+				$('p#idea').html(ideas[randomNum]);
+			});
+
+			function changeContent(classcode) {
+				console.log(classcode)
+				if (classcode == ""){
+					$('#carousel').hide();
+				}
+				else {
+					$('#carousel').show();
+				   ideas = ids[classcode];
+					 randomNum = Math.ceil(Math.random()*ideas.length);
+					$('p#idea').html(ideas[randomNum]);
+				}
+
+			}
+
+			function getClassCode(){
+				str = '';
+				if($('#btn1').hasClass('btn-success')){
+					str = str+'1';
+				}
+				if($('#btn2').hasClass('btn-success')){
+						str = str+'2';
+					}
+				if($('#btn3').hasClass('btn-success')){
+						str = str+'3';
+					}
+				return str;
+			}
+		});
+
+
 		</script>
 		<div class="container">
 		<footer class="footer">
