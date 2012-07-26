@@ -19,35 +19,14 @@ var vis = d3.select("#chart").append("svg")
     .attr("height", radius * 2)
   .append("g")
     .attr("transform", "translate(" + radius + "," + radius + ")");
+
+
 var circle = vis.append("circle")
 		.attr("r", 300)
-		.attr("id", "maincircle")
-		 // .style("-webkit-border-radius", "50px")
-		 // 		 .style("-moz-border-radius", "50px")
-		 // 		 .style("border-radius", "50px")
-		.style("fill", "#cde7f6");
-		//.style("fill", "#718e3a");
-
-// var gradient = vis.append("svg:defs")
-//   .append("svg:linearGradient")
-//     .attr("id", "gradient")
-//     .attr("x1", "0%")
-//     .attr("y1", "0%")
-//     .attr("x2", "100%")
-//     .attr("y2", "100%")
-//     .attr("spreadMethod", "pad");
-// 
-// gradient.append("svg:stop")
-//     .attr("offset", "0%")
-//     .attr("stop-color", "#0c0")
-//     .attr("stop-opacity", 1);
-// 
-// gradient.append("svg:stop")
-//     .attr("offset", "100%")
-//     .attr("stop-color", "#c00")
-//     .attr("stop-opacity", 1);
-// 
-// circle.style("fill", "url(#gradient)");
+		.attr("class", "foo")
+		.attr("id", "maincircle");
+//circle.style("fill", "url(#pat)");
+circle.style("fill", "#cde7f6");
 
 d3.json("temp.json", function(json) {
   var nodes = tree.nodes(json);

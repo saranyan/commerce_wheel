@@ -46,7 +46,8 @@
         </div>
 															
     <div id="chart" style="margin-top:-75px;"></div>
-    
+    <!-- <p> I know this is useless, but what is harm in having some fun </p>
+       <a href="#" id="faster">faster</a> <a href="#" id="slower">slower </a> -->
 	</div>
     <script type="text/javascript" src="d3/tree-radial.js"></script>
 		<script type="text/javascript">
@@ -77,6 +78,16 @@
 				$(document).delegate("#maincircle","mouseout",function(){
 					ang = 0.1;
 				});
+				// $('#faster').click(function(){
+				// 					if (ang <= 0.9){
+				// 						ang += 0.1;
+				// 					}
+				// 				});
+				// 				$('#slower').click(function(){
+				// 					if (ang >= 0.1){
+				// 						ang -= 0.1;
+				// 					}
+				// 				})
 			})
 		</script>
 		<script type="text/javascript">
@@ -104,6 +115,8 @@
 				changeContent(getClassCode());
 
 			});
+			
+
 
 			$('a#refresh').click(function(){
 				classcode = getClassCode();
