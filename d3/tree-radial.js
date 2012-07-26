@@ -7,7 +7,7 @@ var m = [20, 120, 20, 120],
 
 
 var tree = d3.layout.tree()
-    .size([360, radius - 60])
+    .size([360, radius - 200])
     .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2); });
 
 var diagonal = d3.svg.diagonal.radial()
