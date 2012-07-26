@@ -25,8 +25,8 @@ var circle = vis.append("circle")
 		 // .style("-webkit-border-radius", "50px")
 		 // 		 .style("-moz-border-radius", "50px")
 		 // 		 .style("border-radius", "50px")
-		//.style("fill", "#cde7f6");
-		.style("fill", "#718e3a");
+		.style("fill", "#cde7f6");
+		//.style("fill", "#718e3a");
 
 // var gradient = vis.append("svg:defs")
 //   .append("svg:linearGradient")
@@ -137,12 +137,12 @@ function links(name){
 }
 
 function color(name){
-	var obj1 = {"X.commerce" : "transparent","Store":"#e6ebea","Predictions":"#e6ebea","Discovery":"#e6ebea","Location":"#e6ebea", "GeoFencing" : "#e6ebea", "Payment":"#e6ebea"};
+	var obj1 = {"X.commerce" : "#ffffff","Store":"#e6ebea","Predictions":"#e6ebea","Discovery":"#e6ebea","Location":"#e6ebea", "GeoFencing" : "#e6ebea", "Payment":"#e6ebea"};
    return obj1[name];
 }
 
 function size(name){
-	var stage1 = 10;
+	var stage1 = 20;
 	var stage2 = 30;
 	
 	var obj1 = {"X.commerce" : stage1,"Store":stage2,"Predictions":stage2,"Discovery":stage2,"Location":stage2, "GeoFencing" : stage2, "Payment":stage2};
