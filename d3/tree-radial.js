@@ -41,6 +41,7 @@ d3.json("temp.json", function(json) {
       .data(nodes)
     .enter().append("g")
       .attr("class", "node")
+	  .attr("id", function(d){ return d.name.replace(/\./,'') })
       .attr("transform", function(d) { 
 		//return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")";
 		 	if(d.name == "X.commerce") {
@@ -55,14 +56,14 @@ d3.json("temp.json", function(json) {
       .attr("r", function(d){ return d.name ? size(d.name) : 10})
 	  .style("fill", function(d){ return d.name ? color(d.name) : "#fff"})
 	  .on("click", click);
+	  
   
   node.append("svg").append("foreignObject")
 	  .attr("width", 100)
 	  .attr("height", 150)
 	  .attr("x", function(d) { 
 		if(d.name == "X.commerce"){
-			//return -50 ;
-			
+			return -20;
 		}
 		else 
 		{
@@ -71,7 +72,7 @@ d3.json("temp.json", function(json) {
 	   })
 	  .attr("transform", function(d){
 		if(d.name == "X.commerce"){
-			return "translate(0,10)"
+			return "translate(-10,-10)"
 		}
 		else 
 		{
@@ -80,12 +81,15 @@ d3.json("temp.json", function(json) {
 		})
 	  .append("xhtml:body")
 	    .style("font", "12px 'Helvetica'")
+		.style("display", function(d) {
+			return (d.name == "X.commerce" ? "none" : "block");
+		})
 		.style("background-color","transparent")
 		.style("margin-left", "20px")
 		
 	    .html(function(d) { 
 		
-		  return (typeof links(d.name)) !== "undefined" ? '<a href="'+ links(d.name)+'" target=_blank>'+d.name+'</a>': d.name.split(' ').join('<br/>'); 
+		  return (typeof links(d.name)) !== "undefined" ? ((typeof logos(d.name)) !== "undefined" ? ('<img src="'+logos(d.name)+'"></img>'+'<a href="'+ links(d.name)+'" target=_blank>'+d.name+'</a>'): '<a href="'+ links(d.name)+'" target=_blank>'+d.name+'</a>'): d.name.split(' ').join('<br/>'); 
 		
 		
 		});
@@ -101,7 +105,7 @@ d3.json("temp.json", function(json) {
 	.append("svg").append('foreignObject').append('xhtml:body')
       	.html(function(d) { return d.name.split(' ').join('<br/>'); })
 */   
-
+d3.select('g#Xcommerce.node').append('svg:image').attr('x',-20).attr('y',-20).attr('width',40).attr('height',40).attr('xlink:href','images/x_com.png')
 });
 
 function update(source) {
@@ -111,7 +115,7 @@ function update(source) {
 }
 
 function links(name){
-	var obj1 = {"X.commerce" : "http://x.com","Magento":"http://www.magentocommerce.com/api/rest/introduction.html","Hunch":"http://hunch.com/developers/v1/","Redlaser":"http://redlaser.com","Milo":"http://milo.com/api-docs/", "eBay" : "https://www.x.com/developers/ebay", "PayPal":"https://www.x.com/developers/paypal", "card.io":"https://www.card.io/integrate/"};
+	var obj1 = {"Magento":"http://www.magentocommerce.com/api/rest/introduction.html","Hunch":"http://hunch.com/developers/v1/","Redlaser":"http://redlaser.com","Milo":"http://milo.com/api-docs/", "eBay" : "https://www.x.com/developers/ebay", "PayPal":"https://www.x.com/developers/paypal", "card.io":"https://www.card.io/integrate/","Where":"https://advertising.paypal.com/"};
    return obj1[name];
 }
 
@@ -120,6 +124,10 @@ function color(name){
    return obj1[name];
 }
 
+function logos(name){
+	var obj1 = {"eBay" : "images/ebay.png", "Magento" : "images/magento.png", "Milo" : "images/milo.png", "Hunch" : "images/hunch.png", "Redlaser" : "images/redlaser.png", "Where" : "images/where.png", "card.io" : "images/card_io.png","PayPal":"images/paypal.png"};
+   return obj1[name];
+}
 function size(name){
 	var stage1 = 20;
 	var stage2 = 30;
