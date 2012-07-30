@@ -121,7 +121,7 @@ function links(name){
 }
 
 function color(name){
-	var obj1 = {"X.commerce" : "#329ebc","Store":"#329ebc","Predictions":"#329ebc","Discovery":"#329ebc","Location":"#329ebc", "GeoFencing" : "#329ebc", "Payment":"#329ebc"};
+	var obj1 = {"X.commerce" : "#ffffff","Store":"#329ebc","Predictions":"#329ebc","Discovery":"#329ebc","Location":"#329ebc", "GeoFencing" : "#329ebc", "Payment":"#329ebc"};
    return obj1[name];
 }
 
