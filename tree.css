@@ -29,6 +29,7 @@ dice {
 }
 
 div.top {
+	margin-top: 10px;
 	color: #767676;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
