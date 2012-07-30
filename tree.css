@@ -28,6 +28,23 @@ dice {
 	background: #fff;
 }
 
+div.top {
+	color: #767676;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+svg a {
+	color: #ffffff;
+}
+
+div#chart{
+
+}
+
 /*#btn1 {
 	height: 300px;
 }

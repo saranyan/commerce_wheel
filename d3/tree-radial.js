@@ -25,8 +25,8 @@ var circle = vis.append("circle")
 		.attr("r", 300)
 		.attr("class", "foo")
 		.attr("id", "maincircle");
-//circle.style("fill", "url(#pat)");
-circle.style("fill", "#cde7f6");
+circle.style("fill", "#057d9f");
+//circle.style("fill", "#cde7f6");
 
 d3.json("temp.json", function(json) {
   var nodes = tree.nodes(json);
@@ -86,6 +86,7 @@ d3.json("temp.json", function(json) {
 		})
 		.style("background-color","transparent")
 		.style("margin-left", "20px")
+		.style("color", "#fbfbfb")
 		
 	    .html(function(d) { 
 		
@@ -120,7 +121,7 @@ function links(name){
 }
 
 function color(name){
-	var obj1 = {"X.commerce" : "#ffffff","Store":"#e6ebea","Predictions":"#e6ebea","Discovery":"#e6ebea","Location":"#e6ebea", "GeoFencing" : "#e6ebea", "Payment":"#e6ebea"};
+	var obj1 = {"X.commerce" : "#329ebc","Store":"#329ebc","Predictions":"#329ebc","Discovery":"#329ebc","Location":"#329ebc", "GeoFencing" : "#329ebc", "Payment":"#329ebc"};
    return obj1[name];
 }
 
